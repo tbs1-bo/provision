@@ -14,18 +14,18 @@ sudo mv /etc/apt/preferences.d/nosnap.pref ~/Dokumente/nosnap.backup
 sudo apt install snapd
 
 echo "# install mqtt explorer"
-snap install mqtt-explorer
+sudo snap install mqtt-explorer
 
 echo "# install vscode"
-snap install code --classic
+sudo snap install code --classic
 
 echo "# install mosquitto, paho-mqtt, arduino"
 sudo apt install mosquitto python3-paho-mqtt arduino
 
-echo "# create a file /etc/mosquitto/conf.d/allow_anon.conf"
+echo "# creating mqtt config file"
 curl https://raw.githubusercontent.com/tbs1-bo/robo/refs/heads/main/allow_anon.conf | sudo tee /etc/mosquitto/conf.d/allow_anon.conf
 
-echo "# restart broker:"
+echo "# restarting broker"
 sudo systemctl restart mosquitto
 
 echo "# install ltsp"
