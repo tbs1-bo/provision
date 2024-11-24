@@ -23,10 +23,10 @@ echo "# install mosquitto, paho-mqtt, arduino"
 sudo apt install mosquitto python3-paho-mqtt arduino
 
 echo "# create a file /etc/mosquitto/conf.d/allow_anon.conf"
-echo "# add the following lines:"
-echo "allow_anonymous true"
-echo "listener 1883 0.0.0.0"
-echo "restart broker: systemctl restart mosquitto"
+curl https://raw.githubusercontent.com/tbs1-bo/robo/refs/heads/main/allow_anon.conf | sudo tee /etc/mosquitto/conf.d/allow_anon.conf
+
+echo "# restart broker:"
+sudo systemctl restart mosquitto
 
 echo "# install ltsp"
 sudo apt install --install-recommends ltsp ipxe dnsmasq nfs-kernel-server openssh-server squashfs-tools ethtool net-tools epoptes
