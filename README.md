@@ -1,6 +1,6 @@
-# Robo Projekt
+# Provisionierung verschiedener Systeme
 
-Hilfsdateien für das Robo-Projekt.
+Provisionierung von Raspberry Pis und Linux-Systemen.
 
 ## Linux Mint Provisionierung
 
