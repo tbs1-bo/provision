@@ -23,7 +23,7 @@ echo "# install mosquitto, paho-mqtt, arduino"
 sudo apt install mosquitto python3-paho-mqtt arduino
 
 echo "# creating mqtt config file"
-curl https://raw.githubusercontent.com/tbs1-bo/robo/refs/heads/main/allow_anon.conf | sudo tee /etc/mosquitto/conf.d/allow_anon.conf
+curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/allow_anon.conf | sudo tee /etc/mosquitto/conf.d/allow_anon.conf
 
 echo "# restarting broker"
 sudo systemctl restart mosquitto
