@@ -16,3 +16,9 @@ das über LTSP ausgerollt wird.
 Der folgende Befehl provisioniert einen Raspberry für das Roboter Projekt.
 
     curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/rpi_robo_project.sh | bash
+
+## MQTT
+
+Installiert einen Broker, einen grafischen Debug Client und Python Bibliothken
+
+    curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/mqtt.sh | bash
