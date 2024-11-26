@@ -2,9 +2,10 @@
 echo "# update package sources"
 sudo apt update
 
-echo "# enable snap"
-sudo mv /etc/apt/preferences.d/nosnap.pref ~/Dokumente/nosnap.backup
-sudo apt install snapd
+# snap currently not working for mqtt-explorer
+#echo "# enable snap"
+#sudo mv /etc/apt/preferences.d/nosnap.pref ~/Dokumente/nosnap.backup
+#sudo apt install snapd
 
 echo "# install mqtt explorer"
 # sudo snap install mqtt-explorer
