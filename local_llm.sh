@@ -12,7 +12,7 @@ sudo chmod +x /usr/bin/ollama
 sudo useradd -r -s /bin/false -m -d /usr/share/ollama ollama
 
 echo "installing ollama as a systemd service"
-curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/ollama.service | sudo tee /etc/systemd/system/ollama.service
+sudo curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/ollama.service | sudo tee /etc/systemd/system/ollama.service
 sudo systemctl daemon-reload
 sudo systemctl enable ollama
 sudo systemctl start ollama
