@@ -25,3 +25,4 @@ docker run -d --network=host \
 echo "starting ollama server respecting ollama host config $OLLAMA_HOST"
 ollama serve 
 
+# TODO add systemd service for ollama server
