@@ -1,6 +1,5 @@
 # default port 11434 sometimes not working
-OLLAMA_PORT=11435
-OLLAMA_HOST="127.0.0.1:$OLLAMA_PORT"
+OLLAMA_HOST="127.0.0.1:11435"
 
 echo "install ollama https://github.com/ollama/ollama"
 curl -fsSL https://ollama.com/install.sh | sh 
@@ -22,7 +21,11 @@ docker run -d --network=host \
   --restart always \
   ghcr.io/open-webui/open-webui:main
 
-echo "starting ollama server respecting ollama host config $OLLAMA_HOST"
-ollama serve 
 
-# TODO add systemd service for ollama server
+echo "installing ollama as a systemd service"
+curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/ollama.service | sudo tee /etc/systemd/system/ollama.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable ollama
+sudo systemctl start ollama
+
