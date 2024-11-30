@@ -11,7 +11,7 @@ ollama pull llama3.2:1b
 echo "installing docker"
 sudo apt install docker.io 
 
-echo "addind current user to docker group"
+echo "addind current user to docker group (maybe restart required)"
 sudo usermod -a -G docker $USER 
 
 echo "starting docker container"
