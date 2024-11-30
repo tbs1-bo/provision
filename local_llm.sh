@@ -5,8 +5,8 @@ OLLAMA_HOST="127.0.0.1:$OLLAMA_PORT"
 echo "install ollama https://github.com/ollama/ollama"
 curl -fsSL https://ollama.com/install.sh | sh 
 
-echo "test run ollama"
-ollama run llama3.2:1b
+echo "test pull ollama model"
+ollama pull llama3.2:1b
 
 echo "installing docker"
 sudo apt install docker.io 
