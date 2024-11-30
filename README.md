@@ -22,3 +22,11 @@ Der folgende Befehl provisioniert einen Raspberry für das Roboter Projekt.
 Installiert einen Broker, einen grafischen Debug Client und Python Bibliothken
 
     curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/mqtt.sh | bash
+
+
+## lokale LLM mit Web-Interface
+
+Installiert OLLAMA und OpenWbUI als Web-Interface.
+
+    curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/local_llm.sh | bash
+
