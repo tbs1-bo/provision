@@ -7,8 +7,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 echo "pull a ollama model for tests"
 ollama pull llama3.2:1b
 
-echo "create ollam user"
-sudo chmod +x /usr/bin/ollama
+echo "create ollama user"
 sudo useradd -r -s /bin/false -m -d /usr/share/ollama ollama
 
 echo "installing ollama as a systemd service"
