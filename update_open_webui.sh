@@ -7,7 +7,7 @@ docker pull ghcr.io/open-webui/open-webui
 
 echo "starting new container"
 docker run -d --network=host \
-  -v open-webui:/app/backend/data
+  -v open-webui:/app/backend/data \
   -e OLLAMA_BASE_URL=http://127.0.0.1:11435 \
   --name open-webui \
   --restart always \
