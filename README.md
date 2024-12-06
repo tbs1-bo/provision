@@ -19,7 +19,7 @@ Der folgende Befehl provisioniert einen Raspberry für das Roboter Projekt.
 
 ## MQTT
 
-Installiert einen Broker, einen grafischen Debug Client und Python Bibliothken
+Installiert einen Broker, einen grafischen Debug Client und passende Python Bibliotheken
 
     curl https://raw.githubusercontent.com/tbs1-bo/provision/refs/heads/main/mqtt.sh | bash
 
