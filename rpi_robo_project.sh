@@ -6,7 +6,7 @@ echo "# update package sources"
 sudo apt update
 
 echo "# enable snap"
-sudo mv /etc/apt/preferences.d/nosnap.pref ~/Dokumente/nosnap.backup
+sudo mv -v /etc/apt/preferences.d/nosnap.pref ~/nosnap.pref.backup
 sudo apt install snapd
 
 echo "# install mqtt explorer"
